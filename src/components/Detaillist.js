@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 // import Details from "./Details";
 import Track from "./Track";
 import Search from "./Search";
 
 const Detaillist = (props) => {
-  const { trackTitle } = props;
-  console.log(trackTitle);
+  // const [searchPoint, setSearchPoint] = useState("");
+  // const handleSearchData = (searchData) => {
+  //   setSearchPoint(searchData);
+  // };
   //   console.log(props.datas);
   //   const { track_list } = props.value;
   //   console.log(track_list);
   //   console.log(props);
+  // onSearchData={handleSearchData}
   return (
     <>
       <Search />

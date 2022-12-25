@@ -4,7 +4,7 @@ import AlbumIcon from "@mui/icons-material/Album";
 import { Link } from "react-router-dom";
 
 const Track = (props) => {
-  const { tracks, handleTrack } = props;
+  const { tracks } = props;
   return (
     <>
       <div className="col-md-6">

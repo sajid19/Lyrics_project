@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const Search = () => {
+const Search = (props) => {
   const [trackTitle, setTrackTitle] = useState("");
   const [customerInput, setCustomerInput] = useState("");
+  // props.onSearchData(trackTitle);
   const handleChange = (e) => {
     setTrackTitle(e.target.value);
   };
