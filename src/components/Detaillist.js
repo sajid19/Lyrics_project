@@ -15,7 +15,7 @@ const Detaillist = (props) => {
   // onSearchData={handleSearchData}
   return (
     <>
-      <Search />
+      {/* <Search /> */}
       <h2 className="heading">List of Music</h2>
       <div className="row">
         {props.datas.map((item) => {
