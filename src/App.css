@@ -17,3 +17,7 @@
 body {
   background-color: rgb(211, 187, 224);
 }
+.form{
+  justify-content: center;
+  color: #ce4bd2;
+}
