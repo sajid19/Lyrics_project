@@ -7,7 +7,6 @@ const Details = () => {
 	const [isLoading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
 	const [searchSong, setSearchSong] = useState("justin");
-	// const [filteredData, setFilteredData] = useState(datas);
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
@@ -18,24 +17,21 @@ const Details = () => {
 				setDatas(data.message.body.track_list);
 				setLoading(false);
 				setError(null);
-				// console.log(data.message.body.track_list);
 			} catch (err) {
 				setError(error);
-				// setError(error.message);
 			}
 		};
 		fetchData();
 	}, [searchSong]);
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		// console.log(e.target.name.value);
 		setSearchSong(e.target.name.value);
 	};
 
 	return (
 		<>
 			<form onSubmit={handleSubmit} className="form">
-				<input placeholder="search Song" name="name" />
+				<input placeholder="search song" name="name" />
 				<button>search</button>
 			</form>
 
@@ -48,12 +44,3 @@ const Details = () => {
 	);
 };
 export default Details;
-// {datas && <Detaillist datas={datas} />}
-// const handleSearch = (searchValue) => {
-//  let value = searchValue.toLowerCase();
-//  const newTrack = datas.filter((item) => {
-//    const artistName = item.track.artist_name.toLowerCase();
-//    return artistName.startsWith(value);
-//  });
-//  setFilteredData(newTrack);
-// };
