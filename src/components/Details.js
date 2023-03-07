@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Detaillist from "./Detaillist";
-import LoadingSpinner from "./Loadingspinner";
 import "./Details.css";
+import LoadingSpinner from "./Loadingspinner";
 const Details = () => {
 	const [datas, setDatas] = useState([]);
 	const [isLoading, setLoading] = useState(true);
@@ -14,6 +14,7 @@ const Details = () => {
 					`https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?q_artist=${searchSong}&page_size=10&page=1&s_track_rating=desc&apikey=35e9faf44615123fa08513d9a98e39c4`
 				);
 				const data = await res.json();
+				console.log(data);
 				setDatas(data.message.body.track_list);
 				setLoading(false);
 				setError(null);
